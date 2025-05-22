@@ -4,8 +4,8 @@ const s3 = new S3Client({});
 
 export const handler = async (event) => {
     try {
-        const sourceBucket = "sourc-bucket-itg";          ===> SOURCE BUCKET NAME
-        const destinationBucket = "dest-bucket-itg";      ===> DESTINATION BUCKET NAME
+        const sourceBucket = "SOURCE BUCKET NAME";      
+        const destinationBucket = "DESTINATION BUCKET NAME";   
         const objectKey = event.Records[0].s3.object.key;
 
         const copyParams = {
