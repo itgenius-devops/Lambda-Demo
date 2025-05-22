@@ -1,0 +1,25 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowGetFromSourceBucket",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::itgenius-src/*"  // Replace with ARN of Source S3 bucket
+      ]
+    },
+    {
+      "Sid": "AllowPutToDestinationBucket",
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::itgenius-dest/*"  // Replace with ARN of Destination S3 bucket
+      ]
+    }
+  ]
+}
